@@ -105,6 +105,8 @@ EVEN MORSE CODE HAD ENCRYPTION THROUGH OUT HISTORY HUMAN HAVE LOVED SECRETS YOUR
 Answer: `flag{encryptallthethings}`
 
 ## That's A Big File - 300
+In this file we are given a large string of base64 encoded data. When we decode it, we get a smaller string of base64 data. Using a simple loop in a Python script, we can keep decoding the string until we are left with the flag.
+Answer `flag{persistant_are_we?}`
 
 ## Don't Hate Me - 500
 We are given a password protected zip file and told that all characters are lowercase. Brute-forcing this would have been infeasible - the first hint reveals the password to be `youwillneverguessme`. Inside the zip archive, there is another cryptogram (similar to "Picture Words") where each figure represents a letter. I had fun and did this by hand on paper, and created the following code:
