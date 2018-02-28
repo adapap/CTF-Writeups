@@ -171,23 +171,6 @@ We are given a binary file. If we use the command `strings <file>`, all of the s
 Answer: `flag{don't_string_me_along_man!}`
 
 ## The Curse of the Hex - 100
-In this binary file, we must find who "cursed" the owner. If we run the file, we input a name, and the name is printed to the screen. Let's take a look at the source code. Putting the code into a disassembler such as IDA and decompiling the assembly, the following C code for main can be produced:
-```c
-int main(int argc, const char **argv, const char **envp)
-{
-	char v4; // [rsp+0h] [rbp-20h]
-	puts("Who cursed me?");
-	__isoc99_scanf("%s", &v4);
-	printf("Name: %s\n", &v4);
-	return 0;
-}
-```
-This shows us that the program is susceptible to a string format exploit..? No.
-Running `objdump -t <file>` will show us the symbol table, which has the memory addresses of... no.
-```bash
-$ objdump -t krusty_krab | grep curse
-000000000000073a g     F .text  00000000000000fc
-```
 
 ## Where Did I Put That Flag? - 200
 
@@ -227,7 +210,7 @@ Here we have another login page with a username and password. If we check Develo
 User: JohnsTestUser
 Pass: AT3stAccountForT3sting
 ```
-When we log in with this account, we are given user permissions. We can change the cookie which stores our permissions to `admin`.
+When we log in with this account, we are given user permissions. Go back once and you'll find yourself on the blog page. We can change the cookie which stores our permissions to `admin`, refresh the page, and find our flag.
 
 ## tik-tik-boom - 300
 
