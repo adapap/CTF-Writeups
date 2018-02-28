@@ -242,14 +242,23 @@ Answer: `Exploit-DB`
 
 ## How far can you go? - 200
 Password 1: `+++The Mentor+++`
+
 Password 2: `tech model railroad club`
+
 Password 3: `phreaking`
+
 Password 4: `2600 hertz`
+
 Password 5: `february 1984`
+
 Password 6: `new york stock exchange`
+
 Password 7: `the gibson`
+
 Password 8: `global thermonuclear war`
+
 Password 9: `the matrix`
+
 Answer: `flag{W3lc0m3_2_th3_r4bb!7h0l3}`
 
 ## Can you use it? - 200
